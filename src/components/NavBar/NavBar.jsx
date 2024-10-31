@@ -7,7 +7,7 @@ const NavBar = () => {
   <li><NavLink to={'/read-pages'}>Pages to Read</NavLink></li>
   </>
   return (
-    <div className="navbar bg-base-100 px-5 m-0 container mx-auto">
+    <div className="navbar bg-base-100 px-5 lg:px-0 m-0 container mx-auto">
       <div className="navbar-start items-center font-bold">
         <div className="dropdown ">
           <div tabIndex={0} role="button" className="lg:hidden mr-2">
@@ -40,9 +40,9 @@ const NavBar = () => {
           {links}
         </ul>
       </div>
-      <div className="navbar-end gap-2">
-        <a className="bg-green-400 py-2 px-5 rounded-md text-white font-semibold">Sign In</a>
-        <a className="bg-violet-400 py-2 px-5 rounded-md text-white font-semibold">Sign Up</a>
+      <div className="navbar-end gap-2 text-sm sm:text-base">
+        <a className="bg-green-400 py-2 px-3 sm:px-5 rounded-md text-white font-semibold">Sign In</a>
+        <a className="bg-violet-400 py-2 px-3 sm:px-5 rounded-md text-white font-semibold">Sign Up</a>
       </div>
     </div>
   );
