@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { addToStoredReadList, addToStoredWishList } from "../../Utility/Utility";
 
 const BookDetails = () => {
   const { bookId } = useParams();
@@ -19,13 +20,17 @@ const BookDetails = () => {
     rating,
   } = book;
 
+  const handleMarkAsRead = (id) => {
+    addToStoredReadList(id)
+  }
+
   return (
-    <div className="container mx-auto py-5 flex flex-col md:flex-row gap-5 justify-between px-5 lg:px-0">
-      <div className="md:w-1/2">
+    <div className="container mx-auto py-5 flex flex-col md:flex-row gap-8 justify-between px-5 lg:px-0">
+      <div className="md:w-1/2 flex justify-center items-center w-full bg-gray-100 rounded-xl">
         <img
           src={image}
           alt="book-image"
-          className="p-20 bg-gray-100 rounded-xl "
+          className="p-5 md:p-10 lg:p-16 xl:p-0 h-60  sm:h-auto xl:h-[550px]"
         />
       </div>
       <div  className="md:w-1/2 space-y-4">
@@ -43,8 +48,8 @@ const BookDetails = () => {
               <p>Year of Publishing: <strong>{ yearOfPublishing}</strong></p>
               <p>Rating: <strong>{rating}</strong></p>
               <div className="flex gap-3">
-                  <button className="px-5 py-2 border rounded-lg font-semibold">Read</button>
-                  <button className="px-5 py-2 border rounded-lg bg-teal-600 text-white font-semibold">Wishlist</button>
+                  <button onClick={()=> handleMarkAsRead(bookId) } className="px-5 py-2 border rounded-lg font-semibold">Mark As Read</button>
+                  <button onClick={()=> addToStoredWishList(bookId)} className="px-5 py-2 border rounded-lg bg-teal-600 text-white font-semibold">Add To Wishlist</button>
               </div>
       </div>
     </div>
