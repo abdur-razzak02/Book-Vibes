@@ -30,7 +30,7 @@ const BookDetails = () => {
         <img
           src={image}
           alt="book-image"
-          className="p-5 md:p-10 lg:p-16 xl:p-0 h-60  sm:h-auto xl:h-[550px]"
+          className="p-5 md:p-10 lg:p-16 xl:p-5 h-60 sm:h-auto xl:h-[550px]"
         />
       </div>
       <div  className="md:w-1/2 space-y-4">

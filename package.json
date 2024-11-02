@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "@react-login-page/page4": "^1.0.4",
     "localforage": "^1.10.0",
     "match-sorter": "^7.0.0",
     "react": "^18.3.1",
