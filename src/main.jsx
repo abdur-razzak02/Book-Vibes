@@ -13,6 +13,8 @@ import BookDetails from './components/BookDetails/BookDetails.jsx';
 import ListedBooks from './components/ListedBooks/ListedBooks.jsx';
 import Login from './components/Login/Login.jsx';
 import SignUp from './components/SignUp/SignUp.jsx';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
   {
@@ -49,5 +51,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer position="top-center"/>
   </StrictMode>,
 )

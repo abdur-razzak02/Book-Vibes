@@ -8,7 +8,7 @@ const SignUp = () => {
           <img
             src={signupImage}
             alt="login Image"
-            className="w-72 sm:h-64 lg:w-96 lg:h-80 xl:w-[550px] xl:h-[450px]"
+            className="w-72 sm:h-64 lg:w-96 lg:h-80 xl:w-[450px] xl:h-[350px]"
           />
         </div>
 

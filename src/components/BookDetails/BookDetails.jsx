@@ -24,6 +24,10 @@ const BookDetails = () => {
     addToStoredReadList(id)
   }
 
+  const handleAddToWishList = (id) => {
+    addToStoredReadList(id)
+  }
+
   return (
     <div className="container mx-auto py-5 flex flex-col md:flex-row gap-8 justify-between px-5 lg:px-0">
       <div className="md:w-1/2 flex justify-center items-center w-full bg-gray-100 rounded-xl">
@@ -49,7 +53,7 @@ const BookDetails = () => {
               <p>Rating: <strong>{rating}</strong></p>
               <div className="flex gap-3">
                   <button onClick={()=> handleMarkAsRead(bookId) } className="px-5 py-2 border rounded-lg font-semibold">Mark As Read</button>
-                  <button onClick={()=> addToStoredWishList(bookId)} className="px-5 py-2 border rounded-lg bg-teal-600 text-white font-semibold">Add To Wishlist</button>
+                  <button onClick={()=> handleAddToWishList(bookId)} className="px-5 py-2 border rounded-lg bg-teal-600 text-white font-semibold">Add To Wishlist</button>
               </div>
       </div>
     </div>

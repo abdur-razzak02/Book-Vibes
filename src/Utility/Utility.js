@@ -1,4 +1,5 @@
 import { json } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const getStoredReadList = () => {
     const storedListStr = localStorage.getItem('read-list')
@@ -14,12 +15,13 @@ const getStoredReadList = () => {
 const addToStoredReadList = (id) => {
     const storedList = getStoredReadList();
     if (storedList.includes(id)) {
-        console.log('Already Exist');
+        toast.error('Already Exist!')
     }
     else {
         storedList.push(id);
         const storedListStr = JSON.stringify(storedList);
         localStorage.setItem('read-list', storedListStr);
+        toast.success('Added to your book list')
     }
 }
 
@@ -38,6 +40,7 @@ const addToStoredWishList = (id) => {
     const storedList = getStoredWishList();
     if (storedList.includes(id)) {
         console.log('Already Exist');
+        
     }
     else {
         storedList.push(id);
@@ -46,4 +49,4 @@ const addToStoredWishList = (id) => {
     }
 }
 
-export {addToStoredReadList, getStoredReadList,  addToStoredWishList}
+export {addToStoredReadList, getStoredReadList,  addToStoredWishList, getStoredWishList}
