@@ -44,7 +44,9 @@ const NavBar = () => {
         <Link to={'/signin'}>
         <a className="bg-green-400 py-2 px-3 sm:px-5 rounded-md text-white font-semibold">Sign In</a>
         </Link>
+        <Link to={'/signup'}>
         <a className="bg-violet-400 py-2 px-3 sm:px-5 rounded-md text-white font-semibold">Sign Up</a>
+        </Link>
       </div>
     </div>
   );
